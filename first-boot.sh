@@ -75,7 +75,7 @@ echo "Root Script Starting..."
 # Root the VM
 git clone https://gitlab.com/newbit/rootAVD.git
 pushd rootAVD
-sed -i 's/read -t 10 choice/choice=2/g' rootAVD.sh
+sed -i 's/choice=1/choice=2/g' rootAVD.sh
 yes 2 | ./rootAVD.sh system-images/android-30/default/x86_64/ramdisk.img FAKEBOOTIMG
 cp /opt/android-sdk/system-images/android-30/default/x86_64/ramdisk.img /data/android.avd/ramdisk.img
 popd
