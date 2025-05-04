@@ -76,9 +76,7 @@ echo "Root Script Starting BOYYYYYYYYY..."
 git clone https://gitlab.com/newbit/rootAVD.git
 pushd rootAVD
 sed -i 's/read -t 10 choice/choice=2/' rootAVD.sh
-./rootAVD.sh system-images/android-30/default/x86_64/ramdisk.img FAKEBOOTIMG
-sleep 55
-echo
+./rootAVD.sh system-images/android-30/default/x86_64/ramdisk.img
 cp /opt/android-sdk/system-images/android-30/default/x86_64/ramdisk.img /data/android.avd/ramdisk.img
 popd
 echo "Root Done"
