@@ -70,15 +70,13 @@ adb push gapps-11/framework /system
 adb push gapps-11/app /system
 adb push gapps-11/priv-app /system
 
-echo "Root Script Starting..."
+echo "Root Script Starting BOYYYYYYYYY..."
 
 # Root the VM
 git clone https://gitlab.com/newbit/rootAVD.git
 pushd rootAVD
-echo "************SELECTIIIIIIIIING MAGIIIIISK*****************"
 sed -i '/read -t 10 choice/{n;s/choice=1/choice=2/;}' rootAVD.sh
-./rootAVD.sh system-images/android-30/default/x86_64/ramdisk.img FAKEBOOTIMG
-s
+./rootAVD.sh system-images/android-30/default/x86_64/ramdisk.img
 cp /opt/android-sdk/system-images/android-30/default/x86_64/ramdisk.img /data/android.avd/ramdisk.img
 popd
 echo "Root Done"
@@ -89,4 +87,4 @@ rm -r gapps-11
 rm -r rootAVD
 apply_settings
 touch /data/.first-boot-done
-echo "Sucess !!"
+echo "Sucess BOYYYYYYYYYYY!!"
